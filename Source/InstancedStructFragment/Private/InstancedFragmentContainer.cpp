@@ -24,6 +24,7 @@ FInstancedStruct FInstancedFragmentContainer::FindFragmentByClass(const UScriptS
 	return FInstancedStruct();
 }
 
+#if WITH_EDITOR
 void FInstancedFragmentContainer::RebuildTypeMapping()
 {
 	// Update lookup pre save.
@@ -38,3 +39,4 @@ void FInstancedFragmentContainer::RebuildTypeMapping()
 		}
 	}
 }
+#endif

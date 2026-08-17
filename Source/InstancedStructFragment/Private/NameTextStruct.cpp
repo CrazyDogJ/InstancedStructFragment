@@ -3,6 +3,7 @@
 
 #include "NameTextStruct.h"
 
+#if WITH_EDITOR
 void FNameTextStruct::RefreshLocalizationKey()
 {
 	if (!Id.IsEmpty())
@@ -13,3 +14,4 @@ void FNameTextStruct::RefreshLocalizationKey()
 			FText::ChangeKey(CategoryId, Id + "DisplayDescription", DisplayDescription);
 	}
 }
+#endif
